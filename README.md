@@ -1,27 +1,65 @@
-# React + TypeScript + Vite
+# Simple React App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este é um simples projeto de um app com ReactJS, typescript e Vite. Essa aplicação foi usada para criar um crud simples com operações de criação, edição, exclusão, listagem e recuperação de dados, persistidos no localStorage. Além disso, também foi desenvolvidos alguns testes unitários, responsividade e definição de estilo com pré-processador SASS.
 
-Currently, two official plugins are available:
+## Instalação
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Uma rápida introdução da configuração mínima que você precisa para conseguir rodar o projeto.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```shell
+git clone https://github.com/Denis-Lima/simple-react-app.git
+cd simple-react-app
+npm install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Primeiro faremos um clone do projeto. Em seguida, entraremos na pasta clonada e por fim, instalaremos as dependências do projeto.
+
+## Desenvolvimento
+
+### Feito com
+
+React, React Router, SASS, Vite, jest, Typescript
+
+### Pré-requisitos
+
+- [NodeJS](https://nodejs.org/en/download/current) v18.16.1 ou mais recente
+
+### Configurando Dev
+
+```shell
+git clone https://github.com/Denis-Lima/simple-react-app.git
+cd simple-react-app
+npm install
+```
+
+Só é necessário os comandos acima para baixar e instalar o projeto!
+
+### Building
+
+```shell
+npm install
+```
+
+Para instalar o projeto, só é necessário rodar o comando `npm install`.
+
+## Tests
+
+Os testes presentes nesse projeto são apenas testes de unidade e cobrem coisas básicas, como por exemplo, se o componente está renderizado na página, ou se algum comportamento ou atributo deve aparecer ou não, dependendo das props passadas para o mesmo.
+
+```shell
+npm run test
+```
+
+## Style guide
+
+A estrutura do projeto utilizado foi organizada da seguinte forma:
+
+- components: os componentes reutilizáveis do projeto
+- pages: cada arquivo representa uma página (url) do projeto
+- routes: configuração das rotas do projeto
+- stores: funções que lidam com a leitura e escrita da nossa store, que no caso é o localStorage
+- styles: estilização global que não faz parte de nenhum componente específico
+- utils: funções utilitárias
+- views: componentes que possuem 1 ou mais componentes dentro, para formar partes mais complexas para o usuário
+
+Os componentes das pastas "components" e "views" possuem uma pasta própria para eles, onde fica junto o componente em si, o arquivo de estilização próprio e seu arquivo de teste.
